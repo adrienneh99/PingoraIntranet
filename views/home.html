@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<section>
+    <section id="welcome" ng-if="welcome">
+        <h2>Welcome to PAMI</h2>
+        <p>
+            Thank you for visiting our site. Please choose one of the options 
+            from the navigation bar, located on the left side of the screen.
+        </p>
+        <button id="loginButton" ng-click="showLogin()">Login</button>
+    </section>
+    <section id="login" ng-show="login">
+        <h2>Sign in to continue to PAMI</h2>
+        <form novalidate>
+            Username<br />
+            <input type="text" name="username" ng-model="username"/>
+            <br />
+            <br />
+            Password<br />
+            <input type="password" name="password" ng-model="password"/>
+            <br />
+            <br />
+            <br />
+            <button id="signInButton" ng-click="showWelcomeUser()">Sign In</button>
+        </form>
+        <br />
+        <br />
+        <button id="cancelButton" ng-click="showWelcome()">Cancel</button>
+        <br />
+        <br />
+        <h3>Proceed to the <a href="#/createacct">Create Account</a> page 
+            if you do not have a Username and Password.</h3>
+    </section>
+    <section id="welcomeUser" ng-if="welcomeUser">
+        <h1>Welcome to PAMI {{username}}!</h1>
+    </section>
+</section>
+

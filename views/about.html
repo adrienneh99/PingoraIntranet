@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<section ng-controller="locationController">
+    <section id="whatIs">
+        <h2>What is PAMI</h2>
+        <p>
+            PAMI is Pingora Asset Management's private network designed as a 
+            means of communicating corporate and employee specific information, 
+            as well as centralizing documentation and automating business processes.
+        </p>
+    </section>
+    <section id="whoUse">
+        <h2>Who should use PAMI</h2>
+        <p>
+            PAMI is designed for current employees of Pingora Asset Management.
+        </p>
+    </section>
+    <section id="whatInfo">
+        <h2>What information can I find on PAMI</h2>
+        <p>
+            The following information can be found on PAMI:
+        </p>
+        <ul>
+            <li>Snapshot of payroll and paid time off (PTO) balances</li>
+            <li>Link to Pingora's external payroll and PTO systems</li>
+            <li>Pingora's employee handbook</li>
+            <li>List of employee discounts available</li>
+            <li>List of Pingora's policies and procedures</li>
+        </ul>
+    </section>
+
+    <section id="location" class="container-fluid">
+        <h2>Office Locations</h2>
+        <div id="floating-panel">
+            <button id="drop" onclick="drop()" style="margin-right: 50px">View All Locations</button>
+            <input type="checkbox" id="traffic" onclick="traffic()" style="margin-right: 5px"/>View Current Traffic
+        </div>
+        <br />
+        <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+        <section id="officeMap"></section>
+        <br />
+        
+        <section ng-show="error != null">
+            {{error.errorMessage}}
+        </section>
+        
+        <section ng-show="error == null">
+        <label>Location: <input ng-model="search.$"></label> <br />
+        <table id="searchResults">
+            <tr><th style="padding-right: 15px">City</th><th>State</th></tr>
+            <tr ng-repeat="locationObj in locations | filter:search:strict | orderBy : 'state'">
+                <td style="padding-right: 15px">{{locationObj.city}}</td>
+                <td>{{locationObj.state}}</td>
+            </tr>
+        </table>
+        </section>
+    
+    </section>
+</section>

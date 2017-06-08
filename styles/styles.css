@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 14, 2015, 8:46:11 PM
+    Author     : aggie_000
+*/
+
+h1,h2,h3 {
+    font-family: "Century Gothic";
+}
+
+header {
+    text-align: center;
+    color: #001F3D;
+    background-color: whitesmoke;
+    border-width: medium;
+    border-color: #C0C0C0;
+    border-style: solid;
+    margin: 5px 0px 5px 0px; 
+    padding: 20px;
+}
+
+main {
+    font-family: 'Calibri';
+    font-size: 12pt;
+    color: #003366;
+    background-color: whitesmoke;
+    border-width: medium;
+    border-color: #C0C0C0;
+    border-style: solid;
+    margin: 5px 0px 5px 0px;
+    padding: 20px;
+}
+
+footer {
+    font-family: "Century Gothic";
+    color: #003366;
+    background-color: whitesmoke;
+    border-width: medium;
+    border-color: #C0C0C0;
+    border-style: solid;
+    text-align: center;
+    height: 30px;
+}
+
+#emailButton {
+    font-family: "Century Gothic";
+    font-size: 14pt;
+    color: #003366;
+    font-weight: bold;
+}
+
+#signInButton, #cancelButton, #createAcctButton, #loginButton {
+    font-family: "Century Gothic";
+    font-size: 12pt;
+    color: #003366;
+    font-weight: bold;
+}
+
+#kailieFolsom {
+    float: right;
+    margin: 10px 0px 10px 10px;
+}
+
+#commentsTable{
+    border-collapse: collapse;
+    width: 400px;
+}
+
+#commentsTable td, #commentsTable th{
+    border: 1px solid;
+    border-color: #606060;
+}
+
+

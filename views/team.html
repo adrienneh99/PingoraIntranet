@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<section ng-controller="teamController">
+    <section id="teamMembers" class="container-fluid">
+        <h2>PAMI Team Members</h2>
+        
+        <section ng-show="error != null">
+            {{error.errorMessage}}
+        </section>
+        
+        <section ng-show="error == null">
+        <label>Member Name: <input ng-model="search.$"></label> <br />
+        <table id="memberNames">
+            <tr><th style="padding-right: 15px">First Name</th><th>Last Name</th></tr>
+            <tr ng-repeat="userObj in users | filter:search:strict | orderBy :['lastName','firstName']">
+                <td style="padding-right: 15px">{{userObj.firstName}}</td>
+                <td>{{userObj.lastName}}</td>
+            </tr>
+        </table>
+        </section>
+        
+    </section>
+    
+</section>

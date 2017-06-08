@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<section>
+    <h2>Create your PAMI Account</h2>
+    <section id="newAcct">
+        <form id="createAcct" name="createAcct" action="CreateAccount.php"
+              method="post" onsubmit="return validateInputField ()">
+            First Name<br />
+            <input type="text" id="firstName" name="firstName"/>
+            <br />
+            <br />
+            Last Name<br />
+            <input type="text" id="lastName" name="lastName"/>
+            <br />
+            <br />
+            Email<br />
+            <input type="text" id="email" name="email"/>
+            <br />
+            <br />
+            Username<br />
+            <input type="text" id="username" name="username"/>
+            <br />
+            <br />
+            Password<br />
+            <input type="password" id="password" name="password" maxlength="9"/>
+            <br />
+            <br />
+            Confirm Password<br />
+            <input type="password" id="confirmPassword" name="confirmPassword" maxlength="9"/>
+            <br />
+            <br />
+            <br />
+            <input type="submit" id="createAcctButton" name="createAcctButton" value="Create Account"/>
+        </form>
+    </section>
+</section>
+        
